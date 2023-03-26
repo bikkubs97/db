@@ -1,27 +1,38 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Grid from "./Grid"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
 
-export default function App() {
-  const [graphData, setGraphData] = useState(null)
 
-  useEffect(() => {
+
+
+
+
+export default function App() {
+
+
+
+  function fetchData() {
     fetch('https://dashboard-server-tpqg.onrender.com/data')
       .then(response => response.json())
       .then(data => {
-        setGraphData(data)
+        localStorage.setItem('graphData', JSON.stringify(data))
       })
       .catch(error => {
         console.error(error)
       })
-  }, [])
+  }
+
+  fetchData();
+
 
   return( 
     <>
-      <Sidebar />
-      <Header />
-      {graphData && <Grid data={graphData} />}
-    </>
-  )
+
+    <Sidebar/>
+    <Header/>
+    <Grid/>
+  
+  </>)
 }
+
