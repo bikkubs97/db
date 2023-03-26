@@ -2,16 +2,18 @@ import React from "react";
 import Chart from 'react-google-charts';
 
 
-const graphData = JSON.parse(localStorage.getItem('graphData'))
-const lineGraph = graphData.map(item => [new Date(item.published).getFullYear(),  item.intensity])
 
 
 
 export default function Year() {
+
+const graphData = JSON.parse(localStorage.getItem('graphData'))
+const lineGraph = graphData.map(item => [new Date(item.published).getFullYear(),  item.intensity])
+
   
   return (
     <div id="year">
-    <Chart 
+    <Chart
     className="line"
     chartType="LineChart"
     loader={<div>Loading Chart</div>}
@@ -26,7 +28,6 @@ export default function Year() {
     rootProps={{ 'data-testid': '1' }}
   />
   </div>
-  
 );
 
   

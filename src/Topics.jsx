@@ -2,7 +2,11 @@ import React from "react";
 import Chart from "react-google-charts";
 
 
-const graphData = JSON.parse(localStorage.getItem('graphData'))
+
+
+
+export default function Topics() {
+  const graphData = JSON.parse(localStorage.getItem('graphData'))
 const filteredData = graphData.filter(row => (
   row.topic.trim() !== '' 
  
@@ -37,12 +41,9 @@ const options = {
   sizeAxis: { maxSize: 20 },
   colors: ['#EE82EE'], 
 }
-
-
-export default function Topics() {
   return (
     
-      <BubbleChart id="topic"  />
+      <BubbleChart  />
    
   );
 }

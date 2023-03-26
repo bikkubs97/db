@@ -1,18 +1,20 @@
 import React from "react";
 import Chart from "react-google-charts";
 
-const graphData = JSON.parse(localStorage.getItem('graphData'))
 
 
+
+export default function Country() {
+
+  const graphData = JSON.parse(localStorage.getItem('graphData'))
+
+//filered 
 const filteredData = graphData.filter(row => (
   row.country.trim() !== '' 
  
 ))
 const countryChart = filteredData.map(item => [item.country, item.intensity]);
 
-
-
-export default function Country() {
    
   return (
    

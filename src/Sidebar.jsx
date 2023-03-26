@@ -13,7 +13,7 @@ export default function Sidebar() {
           <Link to="year" smooth={true}>Year</Link>
         </li>
         <li>
-          <Link to="like" smooth={true}>Like</Link>
+          <Link to="like" smooth={true}>Likelihood</Link>
         </li>
         <li>
           <Link to="region" smooth={true}>Region</Link>
