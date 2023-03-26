@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Chart from "react-google-charts";
+import { graphContext } from "./App";
 
 
 
 
 export default function Country() {
 
-  const graphData = JSON.parse(localStorage.getItem('graphData'))
+
+const graphData = useContext(graphContext)
 
 //filered 
 const filteredData = graphData.filter(row => (
