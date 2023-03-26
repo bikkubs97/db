@@ -1,13 +1,13 @@
 import React from "react";
 import Chart from 'react-google-charts';
-
+import { useContext } from "react";
+import { graphContext } from "./App";
 
 
 
 
 export default function Year() {
-
-const graphData = JSON.parse(localStorage.getItem('graphData'))
+  const graphData = useContext(graphContext)
 const lineGraph = graphData.map(item => [new Date(item.published).getFullYear(),  item.intensity])
 
   

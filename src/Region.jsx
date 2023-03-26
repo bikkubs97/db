@@ -1,9 +1,11 @@
 import React from "react";
 import Chart from "react-google-charts";
+import { useContext } from "react";
+import { graphContext } from "./App";
 
 
 export default function ScatterChart() {
-  const graphData = JSON.parse(localStorage.getItem("graphData"));
+  const graphData = useContext(graphContext)
 
 const scatterChartData = graphData.map((item) => [item.region, item.intensity, item.relevance]);
 

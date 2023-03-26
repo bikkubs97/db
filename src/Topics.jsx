@@ -1,12 +1,14 @@
 import React from "react";
 import Chart from "react-google-charts";
+import { useContext } from "react";
+import { graphContext } from "./App";
 
 
 
 
 
 export default function Topics() {
-  const graphData = JSON.parse(localStorage.getItem('graphData'))
+  const graphData = useContext(graphContext)
 const filteredData = graphData.filter(row => (
   row.topic.trim() !== '' 
  

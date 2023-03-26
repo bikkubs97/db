@@ -1,13 +1,16 @@
 import React from "react";
 import Chart from 'react-google-charts';
+import { useContext } from "react";
+import { graphContext } from "./App";
 
 
 
 
 
 export default function Intesnsity() {
-  const graphData = JSON.parse(localStorage.getItem('graphData'));
-const filteredData = graphData.filter(row => row.sector.trim() !== '');
+  
+  const graphData = useContext(graphContext)
+  const filteredData = graphData.filter(row => row.sector.trim() !== '');
 
 const intensityChartData = filteredData.reduce((acc, row) => {
   const sector = row.sector;
