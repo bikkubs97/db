@@ -27,11 +27,14 @@ export default function App() {
     <>
     <graphContext.Provider value={graphData}>
       <Sidebar />
-      <Header />
+     
       {graphData.length === 0 ? (
           <Loading />
         ) : (
+          <>
+          <Header />
           <Grid />
+          </>
         )}
       </graphContext.Provider>
     </>
