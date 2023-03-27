@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Grid from "./Grid";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Loading from "./Loading";
 
 export const graphContext = React.createContext()
 
@@ -21,12 +22,17 @@ export default function App() {
       });
   }, []);
 
+
   return (
     <>
     <graphContext.Provider value={graphData}>
       <Sidebar />
       <Header />
-      <Grid />
+      {graphData.length === 0 ? (
+          <Loading />
+        ) : (
+          <Grid />
+        )}
       </graphContext.Provider>
     </>
   );

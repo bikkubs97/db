@@ -89,3 +89,15 @@ body{
     display: flex;
 }
 
+.load{
+    position: absolute;
+    top: 0rem;
+    left: 10vw;
+    margin-left: 0.2rem;
+    padding: 1rem;
+    color: #5544b8;
+    background-image: url('/graph.gif');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
