@@ -35,7 +35,7 @@ const options = {
   },
   vAxis: { title: "Intensity" },
   bubble: {
-    textStyle: { fontSize: 11 },
+    textStyle: { fontSize: 8 },
     opacity: 0.7,
     stroke: '#fff',
     color: '#800080'

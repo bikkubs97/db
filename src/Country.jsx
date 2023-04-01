@@ -10,6 +10,7 @@ export default function Country() {
 
 const graphData = useContext(graphContext)
 
+
 //filered 
 const filteredData = graphData.filter(row => (
   row.country.trim() !== '' 
@@ -17,12 +18,13 @@ const filteredData = graphData.filter(row => (
 ))
 const countryChart = filteredData.map(item => [item.country, item.intensity]);
 
-   
+  
   return (
    
   <div id="country">
  
 <Chart
+   
   width={'600px'}
   height={'500px'}
   chartType="GeoChart"
