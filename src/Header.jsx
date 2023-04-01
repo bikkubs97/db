@@ -5,6 +5,7 @@ export default function Header() {
     <div className="header">
 
     <h1>Global News Dashboard!</h1>
+    <p>Visualization of News articles around the globe</p>
 
     </div>
 

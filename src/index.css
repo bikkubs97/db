@@ -47,14 +47,15 @@ body{
     color: aliceblue;
     border-left: 3px solid white;
     cursor: pointer;
+
+
  
     
 }
 .header{
   
     top: 0;
-   
-    background-color:#d9beff;
+    
     width: 100vw;
     padding: 1.2rem;
     text-align: center;
@@ -101,4 +102,23 @@ body{
     height: 100%;
     width: 100%;
 }
+@media screen and (max-width: 1000px) {
+    body{
+        overflow: hidden;
+    }
 
+    .sidebar{
+        display: none;
+    }
+  
+  .grid{
+   left: 0;
+   right: 0;
+   margin-left: 0;
+   width: 100%;
+   overflow: hidden;
+  }
+  .first{
+    display: none;
+  }
+}
