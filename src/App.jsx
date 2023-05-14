@@ -12,7 +12,7 @@ export default function App() {
 
 
   useEffect(() => {
-    fetch("https://dashboard-server-tpqg.onrender.com/data")
+    fetch("https://dashboard-server-lv2i.onrender.com/data")
       .then((response) => response.json())
       .then((data) => {
         setGraphData(data);
