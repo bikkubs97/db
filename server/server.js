@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import Data from './model.js'
+import GraphData from './model.js'
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
@@ -29,7 +29,7 @@ db.once('open', () => {
 
 
 app.get('/data', (req, res) => {
-    Data.find({})
+    GraphData.find({})
       .then((data) => {
         res.send(data);
       })

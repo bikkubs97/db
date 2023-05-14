@@ -28,4 +28,4 @@ const dataSchema = new Schema(
 
 
 
-export default mongoose.model('Data', dataSchema);
+export default mongoose.model('GraphData', dataSchema);
